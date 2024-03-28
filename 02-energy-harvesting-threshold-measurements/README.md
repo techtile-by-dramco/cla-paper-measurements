@@ -23,4 +23,4 @@ The goal is to investigate whether we can measure this with the MSO64B scope and
 		* Write script to capture signals from scope
 		* Write postprocessing scripts
 	* 2️⃣ IN THE END --> Measure with 917 MHz antenna in the Techtile construction 
-		* Picking up all USRP RF carriers of all USRPs :boo
+		* Picking up all USRP RF carriers of all USRPs
