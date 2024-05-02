@@ -377,7 +377,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [904, 392.0]
+    coordinate: [800, 288.0]
     rotation: 0
     state: enabled
 - name: qtgui_time_sink_x_0
@@ -547,7 +547,7 @@ blocks:
     bw8: '0'
     bw9: '0'
     center_freq0: 917E6
-    center_freq1: '0'
+    center_freq1: 917E6
     center_freq10: '0'
     center_freq11: '0'
     center_freq12: '0'
@@ -591,7 +591,7 @@ blocks:
     dev_addr: '""'
     dev_args: ''
     gain0: tx_gain
-    gain1: '0'
+    gain1: tx_gain
     gain10: '0'
     gain11: '0'
     gain12: '0'
@@ -721,7 +721,7 @@ blocks:
     lo_source9: internal
     maxoutbuf: '0'
     minoutbuf: '0'
-    nchan: '1'
+    nchan: '2'
     num_mboards: '1'
     otw: ''
     samp_rate: samp_rate
@@ -751,7 +751,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1544, 392.0]
+    coordinate: [1792, 352.0]
     rotation: 0
     state: enabled
 
@@ -760,6 +760,7 @@ connections:
 - [blocks_complex_to_mag_squared_0, '0', qtgui_time_sink_x_0, '0']
 - [blocks_multiply_const_vxx_0, '0', blocks_complex_to_mag_squared_0, '0']
 - [blocks_multiply_const_vxx_0, '0', uhd_usrp_sink_0, '0']
+- [blocks_multiply_const_vxx_0, '0', uhd_usrp_sink_0, '1']
 - [blocks_stream_to_tagged_stream_0, '0', digital_ofdm_tx_0, '0']
 - [blocks_stream_to_vector_0, '0', fft_vxx_0, '0']
 - [blocks_vector_to_stream_0, '0', blocks_multiply_const_vxx_0, '0']

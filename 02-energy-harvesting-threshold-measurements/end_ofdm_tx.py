@@ -92,7 +92,7 @@ class end_ofdm_tx(gr.top_block, Qt.QWidget):
             uhd.stream_args(
                 cpu_format="fc32",
                 args='',
-                channels=list(range(0,1)),
+                channels=list(range(0,2)),
             ),
             "",
         )
@@ -102,6 +102,10 @@ class end_ofdm_tx(gr.top_block, Qt.QWidget):
         self.uhd_usrp_sink_0.set_center_freq(917E6, 0)
         self.uhd_usrp_sink_0.set_antenna("TX/RX", 0)
         self.uhd_usrp_sink_0.set_gain(tx_gain, 0)
+
+        self.uhd_usrp_sink_0.set_center_freq(917E6, 1)
+        self.uhd_usrp_sink_0.set_antenna("TX/RX", 1)
+        self.uhd_usrp_sink_0.set_gain(tx_gain, 1)
         self.qtgui_time_sink_x_0 = qtgui.time_sink_f(
             1024, #size
             samp_rate, #samp_rate
@@ -163,6 +167,7 @@ class end_ofdm_tx(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_complex_to_mag_squared_0, 0), (self.qtgui_time_sink_x_0, 0))
         self.connect((self.blocks_multiply_const_vxx_0, 0), (self.blocks_complex_to_mag_squared_0, 0))
         self.connect((self.blocks_multiply_const_vxx_0, 0), (self.uhd_usrp_sink_0, 0))
+        self.connect((self.blocks_multiply_const_vxx_0, 0), (self.uhd_usrp_sink_0, 1))
         self.connect((self.blocks_vector_to_stream_0, 0), (self.blocks_multiply_const_vxx_0, 0))
         self.connect((self.epy_block_0, 0), (self.fft_vxx_0, 0))
         self.connect((self.fft_vxx_0, 0), (self.blocks_vector_to_stream_0, 0))
@@ -190,6 +195,7 @@ class end_ofdm_tx(gr.top_block, Qt.QWidget):
     def set_tx_gain(self, tx_gain):
         self.tx_gain = tx_gain
         self.uhd_usrp_sink_0.set_gain(self.tx_gain, 0)
+        self.uhd_usrp_sink_0.set_gain(self.tx_gain, 1)
 
     def get_sync_word2(self):
         return self.sync_word2
