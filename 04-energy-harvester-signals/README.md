@@ -10,6 +10,8 @@ The goal is to investigate whether we can measure this with the MSO64B scope and
 
 💡UPDATE (experiment 02) ❗❗ Because the harvester input impedance is not a perfect 50 ohms, some of the power will be reflected. This power will also be forwarded to the scope via the RF splitter, leading to incorrect measurement results.❗❗ Solution, the RF circulator can deflect the reflected power from the harvester to a third port where a 50 ohm termination ensures that this power is absorbed.
 
+🧾RF circulator datasheet [TH2528XS-X/900-928MHz](https://cdn.globalso.com/rftyt/9.2-TH2528XS（700-5000MHz.pdf)
+
 ## Measurement procedure
 
 * 1️⃣: Sample CH1 and CH2 with MSO64B scope
