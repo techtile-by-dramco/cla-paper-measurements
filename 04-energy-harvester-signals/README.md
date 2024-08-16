@@ -14,7 +14,7 @@ The goal is to investigate whether we can measure this with the MSO64B scope and
 * 2️⃣: Measure and define threshold level (when is NXP harvester actually charging the buffer)
 * 3️⃣: Postprossing --> look when voltage of energy buffer is rising CH2 relayed to time domain measurement of CH1
 
-![setup](https://github.com/techtile-by-dramco/cla-paper-measurements/blob/main/02-energy-harvesting-threshold-measurements/measurement-setup.drawio.png)
+![setup](https://github.com/techtile-by-dramco/cla-paper-measurements/blob/main/04-energy-harvester-signals/measurement-setup.drawio)
 
 ## 💬 REMARKS - Questions 💬:
 * Probe has an impedance of 10 MOhm 
