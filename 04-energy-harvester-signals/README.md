@@ -8,6 +8,8 @@ The harvester will not be able to convert smaller signals into energy since the 
 
 The goal is to investigate whether we can measure this with the MSO64B scope and get an approximation of the harvester threshold voltage.
 
+Because the harvester input impedance is not a perfect 50 ohms, some of the power will be reflected. This power will also be forwarded to the scope via the RF splitter, leading to incorrect measurement results. Solution, the RF circulator can deflect the reflected power from the harvester to a third port where a 50 ohm termination ensures that this power is absorbed.
+
 ## Measurement procedure
 
 * 1️⃣: Sample CH1 and CH2 with MSO64B scope
