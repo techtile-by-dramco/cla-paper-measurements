@@ -20,6 +20,8 @@ The goal is to investigate whether we can measure this with the MSO64B scope and
 
 ![setup](https://github.com/techtile-by-dramco/cla-paper-measurements/blob/main/04-energy-harvester-signals/measurement-setup.drawio.png)
 
+❗❗ Measure reflected power with scope to estimate S11 and reflection coefficient ❗❗
+
 ## 💬 REMARKS - Questions 💬:
 * Probe has an impedance of 10 MOhm 
 * How to generate the multi-tone signal?
